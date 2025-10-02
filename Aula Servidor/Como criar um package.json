@@ -1,0 +1,15 @@
+PASSOS PARA CRIAR UM PROJETO NODE
+
+1- Criar um diretorio vazio (mkdir)
+2- Crirar um pacote json (npm init)
+3- Configurar o pacote json
+4- Adicionar os componentes (npm i express cors body-parser)
+5- Para rodar o servidor (node app.js)
+
+
+
+
+NODE NÃO É UM LINGUGEM, ELE SOMENTE POSSIBILITA QUE O JAVA SCRIPT FUNCIONE NO SERVIDOR
+
+Todo projeto node é um pacote, que é uma somatoria de codigos (JavaScrip ou TypeScript) + outros pacotes dependentes + 
+arquivo chamado packege.json (descreve detalhes do seu pacote)	
