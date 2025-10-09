@@ -1,0 +1,91 @@
+ //constante imutavel, nao pode tentar fazer reatribuição (mudar o valor da constante)
+const pi = 3.1415;
+
+// +2 exemplos de constante
+const gravidadeLua = 1.72;
+const nomeCompleto = "Leonardo Gambaroni Alves";
+
+//Variaveis no TypeScript possuem 2 jeitos.
+// Let e var (usamos muito let e pouco var)
+
+let idade = 19;
+
+//INFERENCIA DE TIPOS
+/*
+    Nos exemplos acima, nós nao especificamos os tipos das constantes
+    e nem o tipo da variavel idade.
+
+    Você nao fez isso: let idade: Number = 43; 
+
+*/
+
+// A linha a seguir nao usa inferência de tipos.
+const universidade: String = "PUC-Campinas";
+
+// Exemplo de uso de inferência:
+let x = "Texto qualquer";
+// O TypeScript vai deduzir para voce que x é do tipo String
+
+let n;
+n = 1000; //No momento da primeira atribuição ou inicialiação, caso a variavel nao seja tipada por voce, é quando o TypeScript deduz o tipo.
+
+// imitando o que o JavaScript faz.
+let variavelPolimorfica: any = "A";
+variavelPolimorfica = 1000;
+variavelPolimorfica = true;
+variavelPolimorfica = 10.1;
+variavelPolimorfica = "Bom dia";
+
+/*
+    No JavaScript nós podemos fazer coisas do tipo:
+    let variavelXpto = 10;
+    variavelXpto = true;
+    variavelXpto = "10 sring";
+    variavelXpto = 1.95;
+*/
+
+// Que tal a gente criar um tipo nosso?
+// Podemos criar tipos estruturados, usando type ou interface.
+// Existem diferenças, mas vamos começar usando interface.
+
+interface Pessoa {
+    nome: String;
+    idade: Number;
+}
+
+// como criar uma variavel do tipo pessoa.
+let p1: Pessoa = {
+    nome: "Leonardo Gambaroni Alves";
+    idade: 19;
+}
+
+console.log("Nome: " + p1.nome);
+console.log("Nome: " + p1.idade);
+
+// CRIAR UM TIPO CHAMADO endereco.
+interface Endereco{
+    //partes que compoem um endereco
+    logadouro: String;
+    numero: Number;
+    // o ponto de ? torna a propriedade opcional.
+    complemento?: String;
+    bairro: String;
+    cep: String;
+    cidade: String;
+    estado: String;
+}
+
+let el: Endereco = {
+    logadouro: "Av. Brasil",
+    numero: 1000,
+    complemento: "",
+    bairro: "Jd. Guanabara",
+    cidade: "Campinas",
+    estado: "SP",
+    cep: 12345-678
+}
+
+// CEP - Quem emite o CEP? Correios. Não é o seu sistema que controla isso.
+
+// 13327-137
+// 00001-001 => 1001 
