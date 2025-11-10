@@ -60,7 +60,7 @@ let p1: Pessoa = {
 }
 
 console.log("Nome: " + p1.nome);
-console.log("Nome: " + p1.idade);
+console.log("Idade: " + p1.idade);
 
 // CRIAR UM TIPO CHAMADO endereco.
 interface Endereco{
