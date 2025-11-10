@@ -49,14 +49,14 @@ variavelPolimorfica = "Bom dia";
 // Existem diferenças, mas vamos começar usando interface.
 
 interface Pessoa {
-    nome: String;
-    idade: Number;
+    nome: string;
+    idade: number;
 }
 
 // como criar uma variavel do tipo pessoa.
 let p1: Pessoa = {
-    nome: "Leonardo Gambaroni Alves";
-    idade: 19;
+    nome: "Leonardo Gambaroni Alves",
+    idade: 19
 }
 
 console.log("Nome: " + p1.nome);
